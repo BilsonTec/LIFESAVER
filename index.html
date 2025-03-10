@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="image/lifesaver.png" type="image/x-icon" />
+    <title>Acceuil Life Saver</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header_accueil">
+      <img src="image/lifesaver.png" class="logo" />
+      <nav>
+        <div class="header-end">
+          <div class="connexion">
+            <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-crown"></i>
+            <!-- Conteneur des boutons CONNEXION et INSCRIPTION -->
+            <div class="connexion-buttons">
+              <!-- Lien vers la page de connexion -->
+              <a href="html/connexion.html" class="button-lien">
+                <span>CONNEXION</span>
+              </a>
+              <!-- Lien vers la page d'inscription -->
+              <a href="html/inscription.html" class="button-lien">
+                <span>INSCRIPTION</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="header__menu-mobile" id="menu-button">
+        <img src="image/menu_24dp_9F9CC3_FILL0_wght400_GRAD0_opsz24.png" alt="menu version mobile" width="50">
+      </div>
+      <div class="dropdown-menu">
+        <ul>
+          <li><a href="html/inscription.html">INSCRIPTION</a></li>
+          <li><a href="html/connexion.html">CONNEXION</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Section -->
+    <section>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide">
+            <img src="image/gps.jpg" alt="Urgences 24H" />
+            <h2>Service d'Urgence 24/7</h2>
+            <p>
+              Nos médecins sont disponibles en permanence pour répondre à vos
+              besoins.
+            </p>
+          </div>
+          <div class="slide">
+            <img src="image/secour.jpg" alt="Consultations" />
+            <h2>Consultations Médicales</h2>
+            <p>Des consultations rapides et efficaces avec nos spécialistes.</p>
+          </div>
+          <div class="slide">
+            <img src="image/entraide.jpg" alt="Prévention" />
+            <h2>Conseils de Prévention</h2>
+            <p>Restez en bonne santé grâce à nos conseils personnalisés.</p>
+          </div>
+          <div class="slide">
+            <img src="image/EMERGENCY.png" alt="Prévention" />
+            <h2>Localisations des urgences en temps réel</h2>
+            <p>Trouvez rapidement les services de secours les plus proches</p>
+          </div>
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+    <script src="js/Acceuil_life_saver.js"></script>
+    <script src="js/dropdown.js"></script>
+  </body>
+</html>

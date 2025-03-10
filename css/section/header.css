@@ -1,0 +1,140 @@
+.header_accueil {
+  width: 100%;
+  height:   85px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 10%;
+}
+
+.logo {
+  width: 100px;
+  margin-left: -3em;
+}
+
+/* boutton du menu mobile */
+.dropdown-menu{
+    position: absolute;
+    top:  10%;
+    right: 1%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 9%;
+    z-index: 1000;
+
+    /* Initialement caché */
+    opacity: 0;
+    transform: translateY(-10px); /* Décalage vers le haut */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none; /* Empêche l'interaction quand caché */
+
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Active l'interaction quand visible */
+}
+
+/* Style des liens du menu */
+.dropdown-menu a {
+  text-decoration: none;
+  position: relative;
+
+  color: var(--gray);
+  font-weight: 900;
+  font-size: 1.2em;
+
+  padding: 1em 1em;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--violet_clair); /* Couleur de l'underline */
+  transition: width 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+  color: var(--hover); /* Changement de couleur au survol */
+}
+
+.dropdown-menu a:hover::after {
+  width: 100%;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.header__menu-mobile{
+  display: none;
+}
+
+/* Styles pour les boutons */
+.connexion-buttons {
+  display: flex;
+  list-style: none;
+  gap: 0.5em;
+}
+
+.button-lien {
+  background-color: #af4c51;
+  /* Couleur du bouton */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  /* Assurer que le lien n'a pas de soulignement */
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-lien:hover {
+  background-color: #45a049;
+  /* Changer la couleur au survol */
+  transform: scale(1.1);
+
+}
+
+/* MENU DEROULANT */
+
+/* MENU DEROULANT */
+
+/* Bouton Accueil */
+.home-button {
+  position: absolute;
+  top: 2.3em;
+  right: 20px;
+
+  /* Placer le bouton en haut à droite */
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+  /* Changer la couleur au survol */
+}
+
+
+

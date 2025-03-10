@@ -1,0 +1,37 @@
+@media  screen and (max-width : 850px) {
+  .form-container{
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width : 750px) {
+  .carousel-btn {
+    display: none;
+  }
+  
+  .slide img{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width : 630px){
+  .header__menu-mobile{
+    display: block;
+  }
+
+
+  .connexion-buttons {
+    display: none;
+  }
+
+  .home-button{
+    position: absolute;
+    top: 2em;
+  }
+
+  .form_titre{
+    position: relative;
+    margin-top: 2em;
+    margin-right: 1.5em;
+  }
+}

@@ -1,0 +1,87 @@
+section {
+  padding: 0; /* Supprime le padding pour que le carrousel occupe toute la section */
+  margin: 0;
+  
+  background-color: var(--violet_clair);
+  width: 100%;
+  height: 95vh; /* Prend toute la hauteur de l'écran */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0; /* Suppression de la bordure arrondie pour mieux occuper la section */
+  box-shadow: none;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 120%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: linear-gradient(
+    to bottom,
+    var(--blanc_cassé_bleuté),
+    var(--bleu_ciel)
+  );
+  background: radial-gradient(
+    circle,
+    var(--blanc_cassé_bleuté),
+    var(--bleu_ciel)
+  );
+  box-shadow: inset 0 0 10px var(--shadow_black);
+}
+
+.slide img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover; /* S'assure que l'image couvre toute la zone sans déformation */
+  border-radius: 0.3em;
+}
+
+.slide h2 {
+  margin-top: 1em;
+  font-family: var(--inter);
+}
+
+.slide p {
+  font-family: var(--anto_font);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--shadow_black);
+  color: var(--white);
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}

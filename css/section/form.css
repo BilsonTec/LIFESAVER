@@ -1,0 +1,117 @@
+/* Titre du formulaire */
+.form_titre {
+  position: absolute;
+  /* Positionner le titre à gauche en haut */
+  top: 0.99em;
+  left: 0.95em;
+  font-size: 32px;
+  /* Taille du titre */
+  color: #333;
+  z-index: 10;
+  /* S'assurer que le titre reste au-dessus du formulaire */
+}
+
+/* Conteneur du formulaire */
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 100px 20px 30px;
+  /* Ajouter de l'espace autour du formulaire pour qu'il ne chevauche pas le titre */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Ombre légère pour donner un effet de flottement */
+  transition: all 0.3s ease-in-out;
+  /* Transition fluide pour l'effet de survol */
+  min-height: 500px;
+  /* Ajuster la hauteur */
+}
+
+/* Effet de survol du formulaire */
+.form-container:hover {
+  transform: translateY(-10px);
+  /* Décalage vertical au survol */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  /* Augmenter l'ombre */
+}
+
+/* Titre du formulaire */
+.form_ {
+  text-align: center;
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Labels des champs de formulaire */
+label {
+  display: block;
+  margin-bottom: 8px;
+  /* Réduire l'espace entre les labels */
+  font-size: 14px;
+  color: #333;
+}
+
+/* Champs de saisie */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  /* Réduire l'espace entre les champs */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  /* Transition douce pour la bordure */
+}
+
+/* Champs de saisie au survol ou focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #4caf50;
+  /* Changer la bordure en vert lors du focus */
+}
+
+/* Bouton du formulaire */
+.form_button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Effet de survol du bouton */
+.form_button:hover {
+  background-color: #45a049;
+}
+
+/* Lien pour redirection */
+.form-container a {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.form-container a:hover 
+  {
+  text-decoration: underline;
+}

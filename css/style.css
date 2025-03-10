@@ -1,0 +1,31 @@
+/* IMPORTATION DES POLICES D'ECRITURES */
+@import url("http://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Roboto:wght@100;300;400display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=DynaPuff:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=DynaPuff:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+/* IMPORTATION DES POLICES D'ECRITURES */
+
+/* IMPORTATION DES DIFFERENTES SECTIONS DU SITE */
+@import url("section/header.css");
+@import url("section/Acceuil_life_saver.css");
+@import url("section/global.css");
+@import url("section/form.css");
+@import url("section/footer.css");
+@import url("section/responsive.css");
+/*  IMPORTATION DES DIFFERENTES SECTIONS DU SITE */
+
+/* CREATION DES VARIABLES */
+/* Définit des variables CSS pour les couleurs et polices. */
+:root {
+  --white: #fff;
+  --blanc_cassé_bleuté: #eff7f8;
+  --bleu_ciel: #d9eef1;
+  --shadow_black: rgba(0, 0, 0, 0.05);
+  --rouge_bordeaux: #bb2337;
+  --violet_clair: #9f9cc3;
+  --gray: #45484e;
+  --hover: #60a1b3;
+
+  --aton_font: "Anton", sans-serif;
+  --inter: "Inter", sans-serif;
+}
+/* CREATION DES VARIABLES */
