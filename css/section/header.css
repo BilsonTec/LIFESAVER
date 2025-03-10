@@ -105,7 +105,7 @@
 }
 
 .button-lien:hover {
-  background-color: #45a049;
+  background-color: var(--violet_clair);
   /* Changer la couleur au survol */
   transform: scale(1.1);
 

@@ -9,8 +9,10 @@
 body {
   font-family: Arial, sans-serif;
   /* Couleur de fond claire */
+  background-color: var(--blanc_cassé_bleuté);
   margin: 0;
   padding: 0;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
