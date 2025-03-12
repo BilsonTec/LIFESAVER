@@ -18,39 +18,128 @@
 
   <!-- Formulaire d'inscription -->
   <div class="form-container">
-    <h2 class="form_h2">Créer un compte</h2>
-    <form action="inscription.php" method="POST">
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" required />
+    <h2 class="form-center-h2">Créer un compte</h2>
 
-      <label for="prenom">Prénom :</label>
-      <input type="text" id="prenom" name="prenom" required />
+    <!-- Choix du type de compte (avant les autres champs du formulaire) -->
+    <form action="inscription.php" method="POST" onsubmit="return validateForm();">
+        <label>Type de compte :</label>
+        <div  class="type_compte">
+            <label for="patient">
+                <input type="radio" id="patient" name="type_compte" value="patient" required
+                    onclick="updateForm()" />
+                Patient
+            </label>
+        </div>
+        <div>
+            <label for="urgences">
+                <input type="radio" id="urgences" name="type_compte" value="urgences" required
+                    onclick="updateForm()" />
+                Urgences
+            </label>
+        </div>
 
-      <label for="date_naissance">Date de naissance :</label>
-      <input type="date" id="date_naissance" name="date_naissance" required />
+        <!-- Formulaire pour Patient -->
+        <div id="patient-fields">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required />
 
-      <label for="adresse">Adresse :</label>
-      <input type="text" id="adresse" name="adresse" required />
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required />
 
-      <label for="numero_telephone">Numéro de téléphone :</label>
-      <input type="tel" id="numero_telephone" name="numero_telephone" required />
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance" required />
 
-      <label for="groupe_sanguin">Groupe sanguin :</label>
-      <input type="text" id="groupe_sanguin" name="groupe_sanguin" required />
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required />
 
-      <label for="antecedents_medicaux">Antécédents médicaux :</label>
-      <textarea id="antecedents_medicaux" name="antecedents_medicaux" rows="4" required></textarea>
+            <label for="numero_telephone">Numéro de téléphone :</label>
+            <input type="tel" id="numero_telephone" name="numero_telephone" required />
 
-      <!-- Champ mot de passe -->
-      <label for="mot_de_passe">Mot de passe :</label>
-      <input type="password" id="mot_de_passe" name="mot_de_passe" required />
+            <label for="groupe_sanguin">Groupe sanguin :</label>
+            <input type="text" id="groupe_sanguin" name="groupe_sanguin" required />
 
-      <!-- Champ confirmation du mot de passe -->
-      <label for="confirmation_mot_de_passe">Confirmer le mot de passe :</label>
-      <input type="password" id="confirmation_mot_de_passe" name="confirmation_mot_de_passe" required />
+            <label for="antecedents_medicaux">Antécédents médicaux :</label>
+            <textarea id="antecedents_medicaux" name="antecedents_medicaux" rows="4" required></textarea>
 
-      <button type="submit" class="form_button">S'inscrire</button>
+            <!-- Champs pour les contacts d'urgence -->
+            <h3 class="form-center-h2">Contacts d'urgence</h3>
+
+            <label for="proche_1_nom">Nom du contact 1 :</label>
+            <input type="text" id="proche_1_nom" name="proche_1_nom" required />
+
+            <label for="proche_1_prenom">Prénom du contact 1 :</label>
+            <input type="text" id="proche_1_prenom" name="proche_1_prenom" required />
+
+            <label for="proche_1_lien_parenté">Lien de parenté du contact 1 :</label>
+            <input type="text" id="proche_1_lien_parenté" name="proche_1_lien_parenté" required />
+
+            <label for="proche_1_telephone">Numéro de téléphone du contact 1 :</label>
+            <input type="tel" id="proche_1_telephone" name="proche_1_telephone" required />
+
+            <label for="proche_2_nom">Nom du contact 2 :</label>
+            <input type="text" id="proche_2_nom" name="proche_2_nom" required />
+
+            <label for="proche_2_prenom">Prénom du contact 2 :</label>
+            <input type="text" id="proche_2_prenom" name="proche_2_prenom" required />
+
+            <label for="proche_2_lien_parenté">Lien de parenté du contact 2 :</label>
+            <input type="text" id="proche_2_lien_parenté" name="proche_2_lien_parenté" required />
+
+            <label for="proche_2_telephone">Numéro de téléphone du contact 2 :</label>
+            <input type="tel" id="proche_2_telephone" name="proche_2_telephone" required />
+
+            <label for="proche_3_nom">Nom du contact 3 :</label>
+            <input type="text" id="proche_3_nom" name="proche_3_nom" required />
+
+            <label for="proche_3_prenom">Prénom du contact 3 :</label>
+            <input type="text" id="proche_3_prenom" name="proche_3_prenom" required />
+
+            <label for="proche_3_lien_parenté">Lien de parenté du contact 3 :</label>
+            <input type="text" id="proche_3_lien_parenté" name="proche_3_lien_parenté" required />
+
+            <label for="proche_3_telephone">Numéro de téléphone du contact 3 :</label>
+            <input type="tel" id="proche_3_telephone" name="proche_3_telephone" required />
+
+            <!-- Champ mot de passe -->
+            <label for="mot_de_passe">Mot de passe :</label>
+            <input type="password" id="mot_de_passe" name="mot_de_passe" required />
+
+            <!-- Champ confirmation du mot de passe -->
+            <label for="confirmation_mot_de_passe">Confirmer le mot de passe :</label>
+            <input type="password" id="confirmation_mot_de_passe" name="confirmation_mot_de_passe" required />
+        </div>
+
+        <!-- Formulaire pour Urgences -->
+        <div id="urgence-fields" style="display: none;">
+            <label for="etablissement_nom">Nom de l'établissement :</label>
+            <input type="text" id="etablissement_nom" name="etablissement_nom" required />
+
+            <label for="etablissement_adresse">Adresse de l'établissement :</label>
+            <input type="text" id="etablissement_adresse" name="etablissement_adresse" required />
+
+            <label for="etablissement_tel">Numéro de téléphone de l'établissement :</label>
+            <input type="tel" id="etablissement_tel" name="etablissement_tel" required />
+
+            <label for="responsable_nom">Nom du responsable :</label>
+            <input type="text" id="responsable_nom" name="responsable_nom" required />
+
+            <label for="responsable_tel">Numéro de téléphone du responsable :</label>
+            <input type="tel" id="responsable_tel" name="responsable_tel" required />
+
+            <!-- Champ mot de passe pour les urgences -->
+            <label for="mot_de_passe_urgence">Mot de passe :</label>
+            <input type="password" id="mot_de_passe_urgence" name="mot_de_passe_urgence" required />
+
+            <!-- Champ confirmation du mot de passe pour les urgences -->
+            <label for="confirmation_mot_de_passe_urgence">Confirmer le mot de passe :</label>
+            <input type="password" id="confirmation_mot_de_passe_urgence" name="confirmation_mot_de_passe_urgence"
+                required />
+        </div>
+
+        <button class="form_button" type="submit">S'inscrire</button>
     </form>
+
+
     <br>
 
     <p>Déjà inscrit ? <a href="connexion.html">Se connecter</a></p>
@@ -59,6 +148,8 @@
   <footer>
     <p>&copy; 2025 LifeSaver. Tous droits réservés.</p>
   </footer>
+
+  <script src="../js/formulaire.js"></script>
 </body>
 
 </html>
